@@ -1,1 +1,67 @@
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+form {
+  width: 50vw;
+  height: 50vh;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+label {
+  width: 50vw;
+  height: 5vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  width: 30%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+input {
+  width: 30%;
+  height: 50%;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 16%;
+  height: 8%;
+}
+
+input:invalid {
+  border-color: red;
+  background-color: lightcoral;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+.error {
+  font-size: 1rem;
+  color: white;
+  background-color: rgb(146, 14, 14);
+  border-radius: 0 0 8px 8px;
+
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
+}
