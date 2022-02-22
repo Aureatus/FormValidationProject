@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FormValidation</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="validation.js"></script>
+    <script src="validation.js" defer></script>
   </head>
   <body>
-    <form action="validation.js">
+    <form novalidate>
       <label for="email">
         <span>Email:</span>
         <input type="email" id="email" name="email" required />
@@ -18,7 +18,13 @@
 
       <label for="country">
         <span>Country:</span>
-        <input type="text" id="country" name="country" required />
+        <input
+          type="text"
+          id="country"
+          name="country"
+          pattern="[a-zA-Z]+"
+          required
+        />
         <span class="error" aria-live="polite"></span>
       </label>
 
