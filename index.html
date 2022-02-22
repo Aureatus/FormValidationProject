@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FormValidation</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="validation.js"></script>
+  </head>
+  <body>
+    <form action="validation.js">
+      <label for="email">
+        <span>Email:</span>
+        <input type="email" id="email" name="email" required />
+        <span class="error" aria-live="polite"></span>
+      </label>
 
+      <label for="country">
+        <span>Country:</span>
+        <input type="text" id="country" name="country" required />
+        <span class="error" aria-live="polite"></span>
+      </label>
+
+      <label for="zip-code">
+        <span>Zip-code:</span>
+        <input
+          type="text"
+          id="zip-code"
+          name="zip-code"
+          pattern="(\d{5}([\-]\d{4})?)"
+          required
+        />
+        <span class="error" aria-live="polite"></span>
+      </label>
+
+      <label for="password">
+        <span>Password:</span>
+        <input type="password" id="password" name="password" required />
+        <span class="error" aria-live="polite"></span>
+      </label>
+
+      <label for="confirm-password">
+        <span>Confirm Password:</span>
+        <input
+          type="password"
+          id="confirm-password"
+          name="confirm-password"
+          required
+        />
+        <span class="error" aria-live="polite"></span>
+      </label>
+
+      <input type="submit" value="submit" />
+    </form>
+  </body>
+</html>
